@@ -1,0 +1,4 @@
+[submodule "mace"]
+	path = mace
+	url = https://github.com/ACEsuit/mace.git
+	branch = 299385b

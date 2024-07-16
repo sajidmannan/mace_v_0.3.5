@@ -1,0 +1,12 @@
+#!/bin/sh
+
+
+export CUDA_VISIBLE_DEVICES=0
+
+# bash  scripts/train/mace/md17/naphthalene/aspirin_ilyas.sh
+
+python3 /home/civil/phd/cez218288/scratch/mace/mace/cli/run_train.py --name="MACE_model" --log_dir="/home/civil/phd/cez218288/scratch/mace/output_dir_sl/Logs" --model_dir="/home/civil/phd/cez218288/scratch/mace/output_dir_sl/Logs" --results_dir="/home/civil/phd/cez218288/scratch/mace/output_dir_sl/Logs" --checkpoints_dir="/home/civil/phd/cez218288/scratch/mace/output_dir_sl/Logs" --train_file='/home/civil/phd/cez218288/scratch/mace/data/train/botnet.xyz' --valid_file='/home/civil/phd/cez218288/scratch/mace/data/val/botnet.xyz' --valid_fraction 0.05 --energy_weight 1 --forces_weight 10 --test_file='/home/civil/phd/cez218288/scratch/mace/data/test/botnet.xyz' --config_type_weights='{"Default":1.0}' --E0s='{1:-13.663181292231226, 3:-216.78673811801755, 6:-1029.2809654211628, 7:-1484.1187695035828, 8:-2042.0330099956639, 15:-1537.0898574856286, 16:-1867.8202267974733}' --model="MACE" --hidden_irreps='128x0e + 128x1o' --r_max 5.0 --batch_size 10 --max_num_epochs 1500 --swa --start_swa 1125 --swa_energy_weight 1 --swa_forces_weight 10 --ema --ema_decay 0.99 --amsgrad --restart_latest --device cuda
+
+
+
+
